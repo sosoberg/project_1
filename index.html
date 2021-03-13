@@ -3,21 +3,62 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Worth a Shot</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./assets/cs/style.cs">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         <header>
             <h1>WORTH A SHOT</h1>
         </header>
-        <nav>
-        </nav>
-        <section>
-        </section>
+        <!-- aside with the options for the user to select -->
         <aside>
+            <h2>Pick your alcohol</h2>
+                <input type="checkbox" class="alcohol" name="gin">
+                <label for="gin">Gin</input>
+                <input type="checkbox" class="alcohol" name="vodka">
+                <label for="vodka">Vodka</input>
+                <input type="checkbox" class="alcohol" name="rum">
+                <label for="rum">Rum</input>
+                <input type="checkbox" class="alcohol" name="tequila">
+                <label for="tequila">Tequila</input>
+                <input type="checkbox" class="alcohol" name="whiskey">
+                <label for="whiskey">Whiskey</input>
+                <input type="checkbox" class="alcohol" name="brandy">
+                <label for="brandy">Brandy</input>
+                <input type="checkbox" class="alcohol" name="sparkling-wine">
+                <label for="sparkling-wine">Sparkling Wine</input>
         </aside>
+        <!-- carousel showing the options that the user has -->
+        <main>
+            <h3>The options that we have found</h3>
+                <section class="carousel">
+                    <div class="card">
+                        <h4 class="drinktitle"></h4>
+                        <img class="drinkimage" src="" alt="picture of drink">
+                        <p class="drinkdescription"></p>
+                    </div>
+                </section>
+        </main>
+
+        <!-- section for the modal -->
+        <section class="modal">
+            <h4 class="modaldrinktitle">Default</h4>
+                <div class="card">  
+                    <img class="modaldrinkimage" src="" alt="picture of drink">
+                    <div class="ingredDiv">
+                        <ul>
+                            <li class="ingredient">Default</li>
+                            <li class="ingredient">Default</li>
+                            <li class="ingredient">Default</li>
+                            <li class="ingredient">Default</li>
+                            <li class="ingredient">Default</li>
+                            <li class="ingredient">Default</li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
         <script src="./assets/js/script.js" async defer></script>
     </body>
 </html>
