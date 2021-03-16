@@ -30,15 +30,36 @@
         </aside>
         <!-- carousel showing the options that the user has -->
         <main>
-            <h3>The options that we have found</h3>
+            <h3>Scroll through available options:</h3>
             <section class="carousel">
-                <div class="card">
-                    <h4 class="drinktitle"></h4>
-                    <img class="drinkimage" src="" alt="picture of drink">
-                    <p class="drinkdescription"></p>
-                    <button id="modalBtn">Modal</button>
+                <div class="carousel_card carousel_card_visible">
+                    <h4 class="drinktitle">Screwdriver</h4>
+                    <img class="drinkimage" src="assets/images/exvodka.jpg" alt="picture of drink">
+                    <p class="drinkdescription">Example 1</p>
+		            <button id="modalBtn">Modal</button>
                 </div>
-            </section>
+                <div class="carousel_card">
+                    <h4 class="drinktitle">Screwdriver</h4>
+                    <img class="drinkimage" src="./assets/images/exvodka.jpg" alt="picture of drink">
+                    <p class="drinkdescription">Example 2</p>
+		            <button id="modalBtn">Modal</button>
+                </div>
+                <div class="carousel_card">
+                    <h4 class="drinktitle">Screwdriver</h4>
+                    <img class="drinkimage" src="./assets/images/exvodka.jpg" alt="picture of drink">
+                    <p class="drinkdescription">Example 3</p>
+		            <button id="modalBtn">Modal</button>
+                </div>
+                <div class="carousel_card">
+                    <h4 class="drinktitle">Screwdriver</h4>
+                    <img class="drinkimage" src="./assets/images/exvodka.jpg" alt="picture of drink">
+                    <p class="drinkdescription">Example 4</p>
+		            <button id="modalBtn">Modal</button>
+                </div>
+                <div class="carousel_actions">
+                    <button id="carouselBtn_prev" aria-label="previous slide"><</button>
+                    <button id="carouselBtn_next" aria-label="next slide">></button>
+                </div>
         </main>
     </div>
 
@@ -62,6 +83,7 @@
     </section>
     <script src="./assets/js/script.js" async defer></script>
     <script src="./assets/js/samsjs.js" async defer></script>
+    <script src="assets/js/carousel.js" async defer></script>
 </body>
 
 </html>
