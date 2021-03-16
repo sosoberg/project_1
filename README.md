@@ -1,13 +1,16 @@
 # project_1 - Worth A Shot
 
 #### Table of Contents
-[About](#about-this-project)
-[Usage](#usage)
+* [About](#about-this-project)
+    * [Description](#description)
+    * [Built With](#built-with)
+* [Usage](#usage)
+* [Contributors](#contributors)
 
 
 # About this Project
 
-![alt text](assets/images/project.png "Screen Shot of webframe for future website")
+![alt text](assets/images/project.PNG "Screen Shot of webframe for future website")
 
 ## Description
 
@@ -18,4 +21,17 @@ This app should ease the stress of any user who has a hard time coming up with f
 
 ## Built With
 
+* [Javascript](https://www.javascript.com/)
+* [CSS](https://www.w3.org/Style/CSS/)
+* [HTML5](https://html.com/html5/)
+* [Youtube API](https://developers.google.com/youtube/v3)
+* [The Cocktail DB](https://www.thecocktaildb.com/api.php)
+
 # Usage
+
+# Contributors
+
+* [Eric Malpass](https://github.com/EricMalpass)
+* [Kelly Dean Mahaffey](https://github.com/DeanMahaffey)
+* [Li Hua Anderson](https://github.com/chopsushi206)
+* [Samuel Oberg](https://github.com/sosoberg)
