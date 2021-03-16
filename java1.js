@@ -1,18 +1,13 @@
-var alcoholButtonEl = document.querySelector('.btn');
-//var alcoholEl = document.querySelector('#alcohol');
-var alcoholButtonEl = document.querySelector('#alcoholButton');
+//var alcoholButtonEl = document.querySelector('#alcoholbutton');
+var alcoholEl = document.querySelector('#alcohol');
 
-
+var alcoholButtonEl = document.querySelector('#gin');
 var buttonClickHandler = function (event) {
-    if (!event.target.matches("button")){
-        return;
-    }
-   var alcoholPick = event.target.getAttribute('data-alcohol');
+    var alcoholPick = event.target.getAttribute('#gin');
   
     if (alcoholPick) {
-        console.log(alcoholPick);
         getAlcohol(alcoholPick);
-     } 
+    }
   };
   var getAlcohol = function (alcoholPick) {
     console.log(alcoholPick);
@@ -32,5 +27,5 @@ var buttonClickHandler = function (event) {
         alert('Unable to connect to bartender');
       });
   };
-  
+
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
