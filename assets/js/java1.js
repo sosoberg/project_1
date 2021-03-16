@@ -34,3 +34,5 @@ var buttonClickHandler = function (event) {
   };
   
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
+
+  
