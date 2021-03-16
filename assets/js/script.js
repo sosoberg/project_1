@@ -1,4 +1,4 @@
-var alcoholbuttonEl = document.querySelector('#alcoholbutton');
+var alcoholButtonEl = document.querySelector('#alcoholbutton');
 var alcoholEl = document.querySelector('#alcohol');
 
 var buttonClickHandler = function (event) {
@@ -26,3 +26,5 @@ var buttonClickHandler = function (event) {
         alert('Unable to connect to bartender');
       });
   };
+
+  alcoholButtonEl.addEventListener('click', buttonClickHandler);
