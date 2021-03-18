@@ -4,6 +4,7 @@ var mainPage = document.querySelector('main');
 var asidePage = document.querySelector('aside');
 var header = document.querySelector('.title')
 
+//button to switch to modal
 modalBtn.addEventListener('click', function() {
     modal.style.display = 'block';
     mainPage.style.display = 'none';
@@ -11,6 +12,7 @@ modalBtn.addEventListener('click', function() {
     header.style.display = 'none';
 });
 
+//button to close modal
 document.querySelector('#closeBtn').addEventListener('click', function () {
     modal.style.display = 'none';
     mainPage.style.display = 'flex';
