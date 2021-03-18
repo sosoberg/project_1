@@ -16,7 +16,7 @@ var buttonClickHandler = function (event) {
   };
   var getAlcohol = function (alcoholPick) {
     console.log(alcoholPick);
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" +alcoholPick+'' ;
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" +alcoholPick+'' ;
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
@@ -34,3 +34,5 @@ var buttonClickHandler = function (event) {
   };
   
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
+
+
