@@ -15,7 +15,11 @@ var buttonClickHandler = function (event) {
   };
   var getAlcohol = function (alcoholPick) {
     console.log(alcoholPick);
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="+ alcoholPick + pick2;
+<<<<<<< HEAD
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="+ alcoholPick +'';
+=======
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" +alcoholPick+'' ;
+>>>>>>> c74f20e53dab82f8914759ca6af44a3c4a2a4d33
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
@@ -33,6 +37,12 @@ var buttonClickHandler = function (event) {
       });
   };
   
+<<<<<<< HEAD
 
 
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
+=======
+  alcoholButtonEl.addEventListener('click', buttonClickHandler);
+
+
+>>>>>>> c74f20e53dab82f8914759ca6af44a3c4a2a4d33

@@ -11,23 +11,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modalstyle.css">
 </head>
 
 <body>
-    <header>
+    <header class="title">
         <h1>WORTH A SHOT</h1>
     </header>
     <!-- aside with the options for the user to select -->
-    <aside id="alcoholButton">
-        <div>Pick your alcohol</div>
-        <button data-alcohol="gin" class="btn">Gin</button>
-        <button data-alcohol="vodka" class="btn">Vodka</button>
-        <button data-alcohol="rum" class="btn">Rum</button>
-        <button data-alcohol="tequila" class="btn">Tequila</button>
-        <button data-alcohol="whiskey" class="btn">Whiskey</button>
-        <button data-alcohol="brandy" class="btn">Brandy</button>
-        <button data-alcohol="Champagne" class="btn">Champagne</button>
-    </aside>
+    <div class="ingredients">
+        <aside id="alcoholButton">
+            <div>Choose an Alcohol:</div>
+            <button data-alcohol="gin" class="btn">Gin</button>
+            <button data-alcohol="vodka" class="btn">Vodka</button>
+            <button data-alcohol="rum" class="btn">Rum</button>
+            <button data-alcohol="tequila" class="btn">Tequila</button>
+            <button data-alcohol="whiskey" class="btn">Whiskey</button>
+            <button data-alcohol="brandy" class="btn">Brandy</button>
+            <button data-alcohol="Champagne" class="btn">Champagne</button>
+        </aside>
+        <aside id="mixersButton">
+            <div>Choose an add-in:</div>
+            <button data-mixers="sodaWater" class="btn">Soda Water</button>
+            <button data-mixers="pineappleJuice" class="btn">Pineapple Juice</button>
+            <button data-mixers="orangeJuice" class="btn">Orange Juice</button>
+            <button data-mixers="grapefruitJuice" class="btn">Grapefruit Juice</button>
+            <button data-mixers="limeJuice" class="btn">Lime Juice</button>
+            <button data-mixers="sweetSour" class="btn">Sweet and Sour</button>
+            <button data-mixers="cocaCola" class="btn">Coca-Cola</button>
+        </aside>
+    </div>
     <!-- carousel showing the options that the user has -->
     <main>
         <h3>Scroll through available options:</h3>
@@ -36,49 +49,58 @@
                 <h4 class="drinktitle">Screwdriver</h4>
                 <img class="imgDisplay">
                 <p class="drinkdescription">Example 1</p>
-                <button id="modalBtn">Modal</button>
+                <button id="modalBtn" class="btn">Click for Recipe</button>
             </div>
             <div class="carousel_card">
                 <h4 class="drinktitle">Screwdriver</h4>
                 <img class="drinkimage" src="assets/images/exvodka.jpeg" alt="picture of drink">
                 <p class="drinkdescription">Example 2</p>
-                <button id="modalBtn">Modal</button>
+                <button id="modalBtn" class="btn">Click for Recipe</button>
             </div>
             <div class="carousel_card">
                 <h4 class="drinktitle">Screwdriver</h4>
-                <img class="drinkimage" src="/assets/images/exvodka.jpeg" alt="picture of drink">
+                <img class="drinkimage" src="assets/images/exvodka.jpeg" alt="picture of drink">
                 <p class="drinkdescription">Example 3</p>
-                <button id="modalBtn">Modal</button>
+                <button id="modalBtn" class="btn">Click for Recipe</button>
             </div>
             <div class="carousel_card">
                 <h4 class="drinktitle">Screwdriver</h4>
-                <img class="drinkimage" src="/assets/images/exvodka.jpeg" alt="picture of drink">
+                <img class="drinkimage" src="assets/images/exvodka.jpeg" alt="picture of drink">
                 <p class="drinkdescription">Example 4</p>
-                <button id="modalBtn">Modal</button>
+                <button id="modalBtn" class="btn">Click for Recipe</button>
             </div>
             <div class="carousel_actions">
                 <button id="carouselBtn_prev" aria-label="previous slide"><i class="fas fa-angle-double-left"></i></button>
                 <button id="carouselBtn_next" aria-label="next slide"><i class="fas fa-angle-double-right"></i></button>
             </div>
-            </main>
+        </section>
+    </main>
 
     <!-- section for the modal -->
     <section class="modal">
-        <h4 class="modaldrinktitle">Default</h4>
-        <div class="card">
-            <img class="modaldrinkimage" src="" alt="picture of drink">
-            <div class="ingredDiv">
-                <ul>
-                    <li class="ingredient">Default</li>
-                    <li class="ingredient">Default</li>
-                    <li class="ingredient">Default</li>
-                    <li class="ingredient">Default</li>
-                    <li class="ingredient">Default</li>
-                    <li class="ingredient">Default</li>
-                    <button id="closeBtn">Close</button>
-                </ul>
+            <div class="grid">
+                <div class="card">
+                    <h4 class="modaldrinktitle">Default</h4>
+                        <img class="modaldrinkimage" width="200" height="100" src="https://cdn.wallpapersafari.com/2/84/DLiZur.jpg" alt="picture of drink">
+                        <div class="ingredDiv">
+                            
+                                <li class="ingredient">Default</li>
+                                <li class="ingredient">Default</li>
+                                <li class="ingredient">Default</li>
+                                <li class="ingredient">Default</li>
+                                <li class="ingredient">Default</li>
+                                <li class="ingredient">Default</li>
+                                <button id="closeBtn">Close</button>
+                            
+                        </div>
+                
+                </div>
+                <div class="youtubeVideo"> 
+                    <h5>Video Tutorial</h5>
+                        <iframe height="250px" width="400px" src="">
+                        </iframe>
+                </div>
             </div>
-        </div>
     </section>
     <script src="./assets/js/script.js" async defer></script>
     <script src="./assets/js/samsjs.js" async defer></script>
