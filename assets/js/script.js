@@ -1,6 +1,7 @@
 var alcoholButtonEl = document.querySelector('.btn');
 //var alcoholEl = document.querySelector('#alcohol');
 var alcoholButtonEl = document.querySelector('#alcoholButton');
+var mixerButtonEl = document.querySelector('#mixersButton')
 
 
 var buttonClickHandler = function (event) {
@@ -18,7 +19,7 @@ var buttonClickHandler = function (event) {
 <<<<<<< HEAD
     var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="+ alcoholPick +'';
 =======
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" +alcoholPick+'' ;
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick+'' ;
 >>>>>>> c74f20e53dab82f8914759ca6af44a3c4a2a4d33
     fetch(apiUrl)
       .then(function (response) {
