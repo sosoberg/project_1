@@ -7,22 +7,22 @@ var buttonClickHandler = function (event) {
     if (!event.target.matches("button")){
         return;
     }
-   var alcoholPick = event.target.getAttribute('data-alcohol');
-  
+  var alcoholPick = event.target.getAttribute('data-alcohol');
+  console.log(alcoholPick)
     if (alcoholPick) {
-        console.log(alcoholPick);
         getAlcohol(alcoholPick);
      } 
   };
   var getAlcohol = function (alcoholPick) {
     console.log(alcoholPick);
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" +alcoholPick+'' ;
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="+ alcoholPick + pick2;
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
             console.log(data);
-            //displayDrinks(data, alcoholPick);
+            drinkDisplay(data, alcoholPick);
+          
           });
         } else {
           alert('Error: ' + response.statusText);
@@ -33,4 +33,6 @@ var buttonClickHandler = function (event) {
       });
   };
   
+
+
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
