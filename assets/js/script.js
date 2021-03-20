@@ -27,7 +27,8 @@ var buttonClickHandler = function (event) {
             //drinkDisplay(data, alcoholPick);//pick2 out
 
             var alcoholDisplay = document.getElementById("imgDisplay");
-            alcoholDisplay.setAttribute("src", data.drinks[0].strDrinkThumb)
+            alcoholDisplay.setAttribute("src", data.drinks[0].strDrinkThumb);
+            alcoholDisplay.classList.add("drinkimage");
             console.log(alcoholDisplay);
 
              var titleDisplay = document.getElementById("titleDisplay");
@@ -35,7 +36,8 @@ var buttonClickHandler = function (event) {
              console.log(titleDisplay);
 
              var alcoholDisplay1 = document.getElementById("imgDisplay1");
-            alcoholDisplay1.setAttribute("src", data.drinks[1].strDrinkThumb)
+            alcoholDisplay1.setAttribute("src", data.drinks[1].strDrinkThumb);
+            alcoholDisplay1.classList.add("drinkimage");
             console.log(alcoholDisplay1);
 
              var titleDisplay1 = document.getElementById("titleDisplay1");
