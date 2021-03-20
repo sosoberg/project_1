@@ -29,7 +29,7 @@ var buttonClickHandler = function (event) {
 
             var alcoholDisplay = document.getElementById("imgDisplay");
             alcoholDisplay.setAttribute("src", data.drinks[0].strDrinkThumb);
-            alcoholDisplay.classList.add("drinkimage");
+            alcoholDisplay.classList.add("drinkImage");
             
 
              var titleDisplay = document.getElementById("titleDisplay");
@@ -38,7 +38,7 @@ var buttonClickHandler = function (event) {
 
              var alcoholDisplay1 = document.getElementById("imgDisplay1");
             alcoholDisplay1.setAttribute("src", data.drinks[1].strDrinkThumb);
-            alcoholDisplay1.classList.add("drinkimage");
+            alcoholDisplay1.classList.add("drinkImage");
             
 
              var titleDisplay1 = document.getElementById("titleDisplay1");
@@ -47,7 +47,7 @@ var buttonClickHandler = function (event) {
 
              var alcoholDisplay2 = document.getElementById("imgDisplay2");
              alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb);
-             alcoholDisplay.classList.add("drinkimage");
+             alcoholDisplay2.classList.add("drinkImage");
              
  
               var titleDisplay2 = document.getElementById("titleDisplay2");
@@ -56,7 +56,7 @@ var buttonClickHandler = function (event) {
 
               var alcoholDisplay3 = document.getElementById("imgDisplay3");
               alcoholDisplay3.setAttribute("src", data.drinks[3].strDrinkThumb);
-              alcoholDisplay.classList.add("drinkimage");
+              alcoholDisplay3.classList.add("drinkImage");
               console.log(alcoholDisplay3);
   
                var titleDisplay3 = document.getElementById("titleDisplay3");
@@ -65,7 +65,7 @@ var buttonClickHandler = function (event) {
 
                var alcoholDisplay4 = document.getElementById("imgDisplay4");
                alcoholDisplay4.setAttribute("src", data.drinks[4].strDrinkThumb);
-               alcoholDisplay.classList.add("drinkimage");
+               alcoholDisplay4.classList.add("drinkImage");
                
    
                 var titleDisplay4 = document.getElementById("titleDisplay4");
