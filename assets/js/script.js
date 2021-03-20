@@ -2,7 +2,6 @@ var alcoholButtonEl = document.querySelector('.btn');
 //var alcoholEl = document.querySelector('#alcohol');
 var alcoholButtonEl = document.querySelector('#alcoholButton');
 var mixerButtonEl = document.querySelector('#mixersButton')
-var recipeButtonEl = document.querySelector('#modalBtn')
 
 
 var buttonClickHandler = function (event) {
@@ -30,28 +29,28 @@ var buttonClickHandler = function (event) {
             var alcoholDisplay = document.getElementById("imgDisplay");
             alcoholDisplay.setAttribute("src", data.drinks[0].strDrinkThumb);
             alcoholDisplay.classList.add("drinkimage");
-            
+            console.log(alcoholDisplay);
 
              var titleDisplay = document.getElementById("titleDisplay");
              titleDisplay.innerHTML = data.drinks[0].strDrink;
-             
+             console.log(titleDisplay);
 
              var alcoholDisplay1 = document.getElementById("imgDisplay1");
             alcoholDisplay1.setAttribute("src", data.drinks[1].strDrinkThumb);
             alcoholDisplay1.classList.add("drinkimage");
-            
+            console.log(alcoholDisplay1);
 
              var titleDisplay1 = document.getElementById("titleDisplay1");
              titleDisplay1.innerHTML = data.drinks[1].strDrink;
-            
+             console.log(titleDisplay1);
 
              var alcoholDisplay2 = document.getElementById("imgDisplay2");
              alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb)
-             
+             console.log(alcoholDisplay2);
  
               var titleDisplay2 = document.getElementById("titleDisplay2");
               titleDisplay2.innerHTML = data.drinks[2].strDrink;
-              
+              console.log(titleDisplay2);
 
               var alcoholDisplay3 = document.getElementById("imgDisplay3");
               alcoholDisplay3.setAttribute("src", data.drinks[3].strDrinkThumb)
@@ -59,16 +58,15 @@ var buttonClickHandler = function (event) {
   
                var titleDisplay3 = document.getElementById("titleDisplay3");
                titleDisplay3.innerHTML = data.drinks[3].strDrink;
-               
+               console.log(titleDisplay3);
 
                var alcoholDisplay4 = document.getElementById("imgDisplay4");
                alcoholDisplay4.setAttribute("src", data.drinks[4].strDrinkThumb)
-               
+               console.log(alcoholDisplay4);
    
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
-                
-                getRecipe(data.drinks[0].strDrink)     
+                console.log(titleDisplay4);
           });
         } else {
           alert('Error: ' + response.statusText);
@@ -78,45 +76,16 @@ var buttonClickHandler = function (event) {
         alert('Unable to connect to bartender');
       });
   };
+  //var drinkDisplay {
 
-  var buttonClickHandler3 = function (event){
-  //var recipePick = data.drinks[0].strDrink
-  //var recipePick = document.getElementById('titleDisplay').textContent;
-  //console.log(recipePick)
- // if (recipePick) {
-  //  getRecipe(recipePick);
- // }
-  };
+  //}
 
-  var getRecipe = function (recipePick) { 
-    console.log(recipePick); 
-
-    var apiUrl2 = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + recipePick; 
-    fetch(apiUrl2)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            console.log(data);
-
-            var recipeDisplay = document.getElementById("recipe");
-            recipeDisplay.innerHTML=data.drinks[0].strInstructions;
-            console.log(recipeDisplay);
-
-        });
-    } else {
-      alert('Error: ' + response.statusText);
-    }
-  })
-  .catch(function (error) {
-    alert('broken');
-  });
-};
-
-        
-        
-
+   //var alcoholDisplay = document.createElement("imgDisplay");
+         //alcoholDisplay.setAttribute ("src", `data.drinks[3].strDrinkThumb.jpg`)
+          //console.log(alcoholDisplay.src);
+          //console.log(alcoholDisplay);
+  
 
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
   //mixerButtonEl.addEventListener('click', buttonClickHandler2);
-  recipeButtonEl.addEventListener('click', buttonClickHandler3);
 
