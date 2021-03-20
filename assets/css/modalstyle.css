@@ -43,6 +43,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+#drinkIntructions {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
 .ingredient {
     padding: 0px 5px 10px 0px;
     list-style-type: none;
