@@ -47,8 +47,7 @@ var buttonClickHandler = function (event) {
              var alcoholDisplay2 = document.getElementById("imgDisplay2");
              alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb);
              alcoholDisplay.classList.add("drinkimage");
-             
->>>>>>> 95303f84f01268452dc9df069b619e50c8152c9a
+        
  
               var titleDisplay2 = document.getElementById("titleDisplay2");
               titleDisplay2.innerHTML = data.drinks[2].strDrink;
