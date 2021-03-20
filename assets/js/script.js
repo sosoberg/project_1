@@ -5,6 +5,7 @@ var mixerButtonEl = document.querySelector('#mixersButton')
 var recipeButtonEl = document.querySelector('#modalBtn')
 
 
+
 var buttonClickHandler = function (event) {
     if (!event.target.matches("button")){
         return;
@@ -70,6 +71,8 @@ var buttonClickHandler = function (event) {
    
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
+
+        
                 
                 getRecipe(data.drinks[0].strDrink)     
           });
@@ -91,6 +94,10 @@ var buttonClickHandler = function (event) {
  // }
   };
 
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+  }
   var getRecipe = function (recipePick) { 
     console.log(recipePick); 
 
