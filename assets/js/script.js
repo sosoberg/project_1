@@ -45,15 +45,18 @@ var buttonClickHandler = function (event) {
              console.log(titleDisplay1);
 
              var alcoholDisplay2 = document.getElementById("imgDisplay2");
-             alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb)
-             console.log(alcoholDisplay2);
+             alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb);
+             alcoholDisplay.classList.add("drinkimage");
+             
+>>>>>>> 95303f84f01268452dc9df069b619e50c8152c9a
  
               var titleDisplay2 = document.getElementById("titleDisplay2");
               titleDisplay2.innerHTML = data.drinks[2].strDrink;
               console.log(titleDisplay2);
 
               var alcoholDisplay3 = document.getElementById("imgDisplay3");
-              alcoholDisplay3.setAttribute("src", data.drinks[3].strDrinkThumb)
+              alcoholDisplay3.setAttribute("src", data.drinks[3].strDrinkThumb);
+              alcoholDisplay.classList.add("drinkimage");
               console.log(alcoholDisplay3);
   
                var titleDisplay3 = document.getElementById("titleDisplay3");
@@ -63,6 +66,9 @@ var buttonClickHandler = function (event) {
                var alcoholDisplay4 = document.getElementById("imgDisplay4");
                alcoholDisplay4.setAttribute("src", data.drinks[4].strDrinkThumb)
                console.log(alcoholDisplay4);
+               alcoholDisplay4.setAttribute("src", data.drinks[4].strDrinkThumb);
+               alcoholDisplay.classList.add("drinkimage");
+               
    
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
