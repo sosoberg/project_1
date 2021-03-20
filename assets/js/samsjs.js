@@ -1,7 +1,7 @@
 var modalBtn = document.querySelector('#modalBtn');
 var modal = document.querySelector('.modal');
 var mainPage = document.querySelector('main');
-var asidePage = document.querySelector('aside');
+var asidePage = document.querySelector('.ingredients');
 var header = document.querySelector('.title')
 
 //button to switch to modal
