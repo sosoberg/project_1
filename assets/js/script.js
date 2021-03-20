@@ -41,6 +41,30 @@ var buttonClickHandler = function (event) {
              var titleDisplay1 = document.getElementById("titleDisplay1");
              titleDisplay1.innerHTML = data.drinks[1].strDrink;
              console.log(titleDisplay1);
+
+             var alcoholDisplay2 = document.getElementById("imgDisplay2");
+             alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb)
+             console.log(alcoholDisplay2);
+ 
+              var titleDisplay2 = document.getElementById("titleDisplay2");
+              titleDisplay2.innerHTML = data.drinks[2].strDrink;
+              console.log(titleDisplay2);
+
+              var alcoholDisplay3 = document.getElementById("imgDisplay3");
+              alcoholDisplay3.setAttribute("src", data.drinks[3].strDrinkThumb)
+              console.log(alcoholDisplay3);
+  
+               var titleDisplay3 = document.getElementById("titleDisplay3");
+               titleDisplay3.innerHTML = data.drinks[3].strDrink;
+               console.log(titleDisplay3);
+
+               var alcoholDisplay4 = document.getElementById("imgDisplay4");
+               alcoholDisplay4.setAttribute("src", data.drinks[4].strDrinkThumb)
+               console.log(alcoholDisplay4);
+   
+                var titleDisplay4 = document.getElementById("titleDisplay4");
+                titleDisplay4.innerHTML = data.drinks[4].strDrink;
+                console.log(titleDisplay4);
           });
         } else {
           alert('Error: ' + response.statusText);
