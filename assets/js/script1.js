@@ -1,26 +1,37 @@
 var alcoholButtonEl = document.querySelector('.btn');
-//var alcoholEl = document.querySelector('#alcohol');
-var alcoholButtonEl = document.querySelector('#alcoholButton');
-var mixerButtonEl = document.querySelector('#mixersButton')
-var recipeButtonEl = document.querySelector('#modalBtn')
-var drinkArray = []
+var alcoholButtonEl = document.querySelector('#submit');
+var mixerButtonEl = document.querySelector('#mixersButton');
+var recipeButtonEl = document.querySelector('#modalBtn');
+var drinkArray = [];
+let alcoholPick, mixersPick;
 
 
-var buttonClickHandler = function (event) {
-    if (!event.target.matches("button")){
-        return;
-    }
-  var alcoholPick = event.target.getAttribute('data-alcohol');
-  //var pick2 = event.target.getAttribute('data-mixers')
-  console.log(alcoholPick) //pick2 out
-    if (alcoholPick) {//pick2 out
-        getAlcohol(alcoholPick); //pick2 out
-     } 
-  };
-  var getAlcohol = function (alcoholPick) { //pick2
-    console.log(alcoholPick); //pick2
+function alcoholChoice() {
+  let alcohol = document.getElementsByName('alcohol');
+  for(i = 0; i < alcohol.length; i++) { 
+    if(alcohol[i].checked) {
+      console.log(alcohol[i].value);
+      alcoholPick = alcohol[i].value;
+    } 
+  }
+}
 
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick; //pick2 out
+function mixersChoice () {
+  let mixers = document.getElementsByName('mixers');       
+  for(i = 0; i < mixers.length; i++) { 
+    if(mixers[i].checked) {
+      console.log(mixers[i].value);
+      mixersPick = mixers[i].value;
+    } 
+  } 
+}
+
+var buttonClickHandler = function () {
+  console.log('clicked'); 
+  alcoholChoice();
+  mixersChoice();
+
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick + ',' + mixersPick; //pick2 out
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
@@ -76,7 +87,7 @@ var buttonClickHandler = function (event) {
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
                 
-                getRecipe(drinkArray)  
+               // getRecipe(drinkArray)  
                 console.log(drinkArray)      
           });
         } else {
@@ -89,7 +100,7 @@ var buttonClickHandler = function (event) {
   };
 
 
-   //YouTube function 92-110
+ /*  //YouTube function 92-110
   var buttonClickHandler3 = function (event){
     var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
     const YOUTUBE_API_KEY="AIzaSyD0xVeWqDSULJKbmLkUou2UAnZxZwSq-CM"
@@ -137,7 +148,7 @@ var buttonClickHandler = function (event) {
     });
     }
 
-};
+};*/
 
 
      
@@ -145,5 +156,5 @@ var buttonClickHandler = function (event) {
 
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
   //mixerButtonEl.addEventListener('click', buttonClickHandler2);
-  recipeButtonEl.addEventListener('click', buttonClickHandler3);
+ // recipeButtonEl.addEventListener('click', buttonClickHandler3);
 
