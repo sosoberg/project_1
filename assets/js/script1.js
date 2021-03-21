@@ -31,7 +31,7 @@ var buttonClickHandler = function () {
   alcoholChoice();
   mixersChoice();
 
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick; //pick2 out
+    var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick + ',' + mixersPick; //pick2 out
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
