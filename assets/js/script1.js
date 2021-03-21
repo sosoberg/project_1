@@ -88,14 +88,26 @@ var buttonClickHandler = function (event) {
       });
   };
 
+
+   //YouTube function 92-110
   var buttonClickHandler3 = function (event){
-  //var recipePick = data.drinks[0].strDrink
-  //var recipePick = document.getElementById('titleDisplay').textContent;
-  //console.log(recipePick)
- // if (recipePick) {
-  //  getRecipe(recipePick);
- // }
-  };
+    var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
+    const YOUTUBE_API_KEY="AIzaSyD0xVeWqDSULJKbmLkUou2UAnZxZwSq-CM"
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=how%20to%20make%20${alcoholName}&key=${YOUTUBE_API_KEY}`;
+    //fetch function following the aforementioned process
+    fetch(url)
+      .then(function (response) {
+        if (response.ok) {
+          response.json().then(function (data) {
+            document.querySelector(".youtubeVideo > iframe").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
+            // make the modal visible
+            document.querySelector(".modal").style.display="block"
+          });
+        } else {
+          alert('Error: ' + response.statusText);
+        }
+    });
+  }
 
   var getRecipe = function (recipePick) { 
     console.log(recipePick); 
