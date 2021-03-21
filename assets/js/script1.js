@@ -1,22 +1,42 @@
 var alcoholButtonEl = document.querySelector('.btn');
-//var alcoholEl = document.querySelector('#alcohol');
-var alcoholButtonEl = document.querySelector('#alcoholButton');
-var mixerButtonEl = document.querySelector('#mixersButton')
-var recipeButtonEl = document.querySelector('#modalBtn')
-var drinkArray = []
+var alcoholButtonEl = document.querySelector('#submit');
+var mixerButtonEl = document.querySelector('#mixersButton');
+var recipeButtonEl = document.querySelector('#modalBtn');
+var drinkArray = [];
 
 
-var buttonClickHandler = function (event) {
-    if (!event.target.matches("button")){
-        return;
-    }
+var buttonClickHandler = function () {
+    console.log('clicked'); 
+    alcoholChoice();
+    mixersChoice();
+  }
+
+
+function alcoholChoice() {
+  let alcohol = document.getElementsByName('alcohol');
+  for(i = 0; i < alcohol.length; i++) { 
+    if(alcohol[i].checked) {
+      console.log(alcohol[i].value);
+    } 
+  }
+}
+
+function mixersChoice () {
+  let mixers = document.getElementsByName('mixers');       
+  for(i = 0; i < mixers.length; i++) { 
+    if(mixers[i].checked) {
+      console.log(mixers[i].value);
+    } 
+  } 
+}
+
   var alcoholPick = event.target.getAttribute('data-alcohol');
   //var pick2 = event.target.getAttribute('data-mixers')
   console.log(alcoholPick) //pick2 out
     if (alcoholPick) {//pick2 out
         getAlcohol(alcoholPick); //pick2 out
-     } 
-  };
+     }
+  
   var getAlcohol = function (alcoholPick) { //pick2
     console.log(alcoholPick); //pick2
 
