@@ -3,6 +3,7 @@ var alcoholButtonEl = document.querySelector('.btn');
 var alcoholButtonEl = document.querySelector('#alcoholButton');
 var mixerButtonEl = document.querySelector('#mixersButton')
 var recipeButtonEl = document.querySelector('#modalBtn')
+var drinkArray = []
 
 
 var buttonClickHandler = function (event) {
@@ -34,7 +35,11 @@ var buttonClickHandler = function (event) {
 
              var titleDisplay = document.getElementById("titleDisplay");
              titleDisplay.innerHTML = data.drinks[0].strDrink;
-             
+             drinkArray.push(data.drinks[0].strDrink)
+             drinkArray.push(data.drinks[1].strDrink)
+             drinkArray.push(data.drinks[2].strDrink)
+             drinkArray.push(data.drinks[3].strDrink)
+             drinkArray.push(data.drinks[4].strDrink)
 
              var alcoholDisplay1 = document.getElementById("imgDisplay1");
             alcoholDisplay1.setAttribute("src", data.drinks[1].strDrinkThumb);
@@ -43,7 +48,7 @@ var buttonClickHandler = function (event) {
 
              var titleDisplay1 = document.getElementById("titleDisplay1");
              titleDisplay1.innerHTML = data.drinks[1].strDrink;
-            
+             
 
              var alcoholDisplay2 = document.getElementById("imgDisplay2");
              alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb);
@@ -71,7 +76,8 @@ var buttonClickHandler = function (event) {
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
                 
-                getRecipe(data.drinks[0].strDrink)     
+                getRecipe(drinkArray)  
+                console.log(drinkArray)      
           });
         } else {
           alert('Error: ' + response.statusText);
@@ -93,30 +99,36 @@ var buttonClickHandler = function (event) {
 
   var getRecipe = function (recipePick) { 
     console.log(recipePick); 
-
-    var apiUrl2 = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + recipePick; 
-    fetch(apiUrl2)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            console.log(data);
-
-            var recipeDisplay = document.getElementById("recipe");
-            recipeDisplay.innerHTML=data.drinks[0].strInstructions;
-            console.log(recipeDisplay);
-
-        });
-    } else {
-      alert('Error: ' + response.statusText);
+    
+    for (var i = 0; i < drinkArray.length; i++) {
+      console.log(drinkArray[i])
+      var apiUrl2 = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkArray[i]; 
+      console.log(apiUrl2)
+      fetch(apiUrl2)
+        .then(function (response) {
+          if (response.ok) {
+            response.json().then(function (data) {
+              console.log(data);
+  
+              var recipeDisplay = document.getElementById("recipe");
+              console.log(recipeDisplay)
+              recipeDisplay.innerHTML=data.drinks[0].strInstructions;
+              console.log(recipeDisplay);
+  
+          });
+      } else {
+        alert('Error: ' + response.statusText);
+      }
+    })
+    .catch(function (error) {
+      alert('broken');
+    });
     }
-  })
-  .catch(function (error) {
-    alert('broken');
-  });
+
 };
 
-        
-        
+
+     
 
 
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
