@@ -87,7 +87,7 @@ var buttonClickHandler = function () {
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
                 
-               // getRecipe(drinkArray)  
+               getRecipe(drinkArray)  
                 console.log(drinkArray)      
           });
         } else {
@@ -119,7 +119,7 @@ var buttonClickHandler = function () {
         }
     });
   }
-
+*/
   var getRecipe = function (recipePick) { 
     console.log(recipePick); 
     
@@ -137,6 +137,10 @@ var buttonClickHandler = function () {
               console.log(recipeDisplay)
               recipeDisplay.innerHTML=data.drinks[0].strInstructions;
               console.log(recipeDisplay);
+
+              var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
+              var nameDisplay = document.getElementById ("name");
+              nameDisplay.innerHTML = alcoholName;
   
           });
       } else {
@@ -148,7 +152,7 @@ var buttonClickHandler = function () {
     });
     }
 
-};*/
+};
 
 
      
