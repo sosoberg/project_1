@@ -23,22 +23,3 @@ document.querySelector('#closeBtn').addEventListener('click', function () {
     header.style.display = 'block';
 });
 
-// function testValue() {
-//     if (titleDisplay = 'undefined') {
-//         console.log('test')
-
-//     } else if(titleDisplay1 = 'undefined') {
-
-//     } else if(titleDisplay2 = 'undefined') {
-
-//     } else if(titleDisplay3 = 'undefined') {
-
-//     } else if(titleDisplay4 = 'undefined') {
-        
-//     } else {
-//         console.log('no value selected')
-//         document.querySelector('.grid').style.display = 'none';
-//         document.querySelector('.errorMessage').style.display = 'block'
-//     }
-// }
-// testValue();
