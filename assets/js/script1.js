@@ -26,8 +26,21 @@ function mixersChoice () {
   } 
 }
 
+document.querySelector('.history1').textContent = localStorage.getItem('0')
+document.querySelector('.history2').textContent = localStorage.getItem('1')
+document.querySelector('.history3').textContent = localStorage.getItem('2')
+document.querySelector('.history4').textContent = localStorage.getItem('3')
+document.querySelector('.history5').textContent = localStorage.getItem('4')
+document.querySelector('.history6').textContent = localStorage.getItem('5')
+document.querySelector('.history7').textContent = localStorage.getItem('6')
+document.querySelector('.history8').textContent = localStorage.getItem('7')
+document.querySelector('.history9').textContent = localStorage.getItem('8')
+
+
+
 var buttonClickHandler = function () {
   console.log('clicked'); 
+  
   alcoholChoice();
   mixersChoice();
 
@@ -37,14 +50,30 @@ var buttonClickHandler = function () {
         if (response.ok) {
           response.json().then(function (data) {
             console.log(data);
-            //drinkDisplay(data, alcoholPick);//pick2 out
+            
+            //Local Storage
 
+            var length = localStorage.length;
+
+            localStorage.setItem(length, alcoholPick + ' and ' + mixersPick)
+            document.querySelector('.history1').textContent = localStorage.getItem('0')
+            document.querySelector('.history2').textContent = localStorage.getItem('1')
+            document.querySelector('.history3').textContent = localStorage.getItem('2')
+            document.querySelector('.history4').textContent = localStorage.getItem('3')
+            document.querySelector('.history5').textContent = localStorage.getItem('4')
+            document.querySelector('.history6').textContent = localStorage.getItem('5')
+            document.querySelector('.history7').textContent = localStorage.getItem('6')
+            document.querySelector('.history8').textContent = localStorage.getItem('7')
+            document.querySelector('.history9').textContent = localStorage.getItem('8')
+            
+            //drinkDisplay(data, alcoholPick);//pick2 out
             var alcoholDisplay = document.getElementById("imgDisplay");
             alcoholDisplay.setAttribute("src", data.drinks[0].strDrinkThumb);
             alcoholDisplay.classList.add("drinkImage");
             
 
              var titleDisplay = document.getElementById("titleDisplay");
+             
              titleDisplay.innerHTML = data.drinks[0].strDrink;
              drinkArray.push(data.drinks[0].strDrink)
              drinkArray.push(data.drinks[1].strDrink)
@@ -98,7 +127,6 @@ var buttonClickHandler = function () {
         alert('Unable to connect to bartender');
       });
   };
-
 
  /*  //YouTube function 92-110
   var buttonClickHandler3 = function (event){
