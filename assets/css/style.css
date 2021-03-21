@@ -39,16 +39,15 @@ header {
 }
 
 aside {
-    margin: 0px 5px 0px 5px;
     padding: 5px;
     width: 250px;
-    background-color: rgba(10, 10, 10, .5);
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
         "title"
         "list"
         "button";
+    margin-bottom: 10px;
 
 }
 
@@ -88,6 +87,8 @@ label {
     width: 100%;
     padding: 10px;
     grid-area: ingredients;
+    background-color: rgba(10, 10, 10, .5);
+    margin: 0px 5px 0px 5px;
 }
 
 .alcoholcontainer {
