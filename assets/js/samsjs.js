@@ -1,4 +1,4 @@
-var modalBtn = document.querySelectorAll('#modalBtn');
+var modalBtn = document.querySelectorAll('#modalBtn');//.modalbtn
 var modal = document.querySelector('.modal');
 var mainPage = document.querySelector('main');
 var asidePage = document.querySelector('.ingredients');
