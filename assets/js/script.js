@@ -94,10 +94,6 @@ var buttonClickHandler = function (event) {
  // }
   };
 
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    
-  }
   var getRecipe = function (recipePick) { 
     console.log(recipePick); 
 
