@@ -3,13 +3,7 @@ var alcoholButtonEl = document.querySelector('#submit');
 var mixerButtonEl = document.querySelector('#mixersButton');
 var recipeButtonEl = document.querySelector('#modalBtn');
 var drinkArray = [];
-
-
-var buttonClickHandler = function () {
-    console.log('clicked'); 
-    alcoholChoice();
-    mixersChoice();
-  }
+let alcoholPick, mixersPick;
 
 
 function alcoholChoice() {
@@ -17,6 +11,7 @@ function alcoholChoice() {
   for(i = 0; i < alcohol.length; i++) { 
     if(alcohol[i].checked) {
       console.log(alcohol[i].value);
+      alcoholPick = alcohol[i].value;
     } 
   }
 }
@@ -26,19 +21,15 @@ function mixersChoice () {
   for(i = 0; i < mixers.length; i++) { 
     if(mixers[i].checked) {
       console.log(mixers[i].value);
+      mixersPick = mixers[i].value;
     } 
   } 
 }
 
-  var alcoholPick = event.target.getAttribute('data-alcohol');
-  //var pick2 = event.target.getAttribute('data-mixers')
-  console.log(alcoholPick) //pick2 out
-    if (alcoholPick) {//pick2 out
-        getAlcohol(alcoholPick); //pick2 out
-     }
-  
-  var getAlcohol = function (alcoholPick) { //pick2
-    console.log(alcoholPick); //pick2
+var buttonClickHandler = function () {
+  console.log('clicked'); 
+  alcoholChoice();
+  mixersChoice();
 
     var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick + pick2; //pick2 out
     fetch(apiUrl)
@@ -96,7 +87,7 @@ function mixersChoice () {
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
                 
-                getRecipe(drinkArray)  
+               // getRecipe(drinkArray)  
                 console.log(drinkArray)      
           });
         } else {
@@ -109,7 +100,7 @@ function mixersChoice () {
   };
 
 
-   //YouTube function 92-110
+ /*  //YouTube function 92-110
   var buttonClickHandler3 = function (event){
     var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
     const YOUTUBE_API_KEY="AIzaSyD0xVeWqDSULJKbmLkUou2UAnZxZwSq-CM"
@@ -157,7 +148,7 @@ function mixersChoice () {
     });
     }
 
-};
+};*/
 
 
      
@@ -165,5 +156,5 @@ function mixersChoice () {
 
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
   //mixerButtonEl.addEventListener('click', buttonClickHandler2);
-  recipeButtonEl.addEventListener('click', buttonClickHandler3);
+ // recipeButtonEl.addEventListener('click', buttonClickHandler3);
 
