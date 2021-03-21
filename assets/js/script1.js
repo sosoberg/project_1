@@ -80,15 +80,27 @@ var buttonClickHandler = function () {
              drinkArray.push(data.drinks[2].strDrink)
              drinkArray.push(data.drinks[3].strDrink)
              drinkArray.push(data.drinks[4].strDrink)
+             const modalBtn = document.querySelector(".modalbtn");
+             console.log(modalBtn);
+             modalBtn.addEventListener("click", function(){
+              console.log("hi")
+              getRecipe(data.drinks[0])
+            })
 
              var alcoholDisplay1 = document.getElementById("imgDisplay1");
             alcoholDisplay1.setAttribute("src", data.drinks[1].strDrinkThumb);
             alcoholDisplay1.classList.add("drinkImage");
             
+            
 
              var titleDisplay1 = document.getElementById("titleDisplay1");
              titleDisplay1.innerHTML = data.drinks[1].strDrink;
-             
+             const modalBtn1 = document.querySelector(".modalbtn1");
+             console.log(modalBtn1);
+             modalBtn1.addEventListener("click", function(){
+              console.log("hi")
+              getRecipe(data.drinks[1])
+            })
 
              var alcoholDisplay2 = document.getElementById("imgDisplay2");
              alcoholDisplay2.setAttribute("src", data.drinks[2].strDrinkThumb);
@@ -97,6 +109,12 @@ var buttonClickHandler = function () {
  
               var titleDisplay2 = document.getElementById("titleDisplay2");
               titleDisplay2.innerHTML = data.drinks[2].strDrink;
+              const modalBtn2 = document.querySelector(".modalbtn2");
+              console.log(modalBtn2);
+              modalBtn.addEventListener("click", function(){
+              console.log("hi")
+              getRecipe(data.drinks[2])
+            })
               
 
               var alcoholDisplay3 = document.getElementById("imgDisplay3");
@@ -106,6 +124,12 @@ var buttonClickHandler = function () {
   
                var titleDisplay3 = document.getElementById("titleDisplay3");
                titleDisplay3.innerHTML = data.drinks[3].strDrink;
+               const modalBtn3 = document.querySelector(".modalbtn3");
+               console.log(modalBtn3);
+              modalBtn.addEventListener("click", function(){
+              console.log("hi")
+              getRecipe(data.drinks[3])
+            })
                
 
                var alcoholDisplay4 = document.getElementById("imgDisplay4");
@@ -115,8 +139,16 @@ var buttonClickHandler = function () {
    
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
+                const modalBtn4 = document.querySelector(".modalbtn2");
+                console.log(modalBtn4);
+                modalBtn.addEventListener("click", function(){
+                getRecipe(data.drinks[4])
+            })
                 
-               getRecipe(drinkArray)  
+                
+                console.dir(modalBtn1)
+                
+              // getRecipe(drinkArray)  
                 console.log(drinkArray)      
           });
         } else {
@@ -149,7 +181,7 @@ var buttonClickHandler = function () {
   }
 */
   var getRecipe = function (recipePick) { 
-    console.log(recipePick); 
+    console.log({recipePick}); 
     
     for (var i = 0; i < drinkArray.length; i++) {
       console.log(drinkArray[i])
