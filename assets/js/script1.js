@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-//var alcoholButtonEl = document.querySelector('.btn');
-//var alcoholEl = document.querySelector('#alcohol');
-var alcoholButtonEl = document.querySelector('#alcoholButton');
-var mixerButtonEl = document.querySelector('#mixersButton')
-var recipeButtonEl = document.querySelector('#modalBtn')
-var drinkArray = []
-=======
 var alcoholButtonEl = document.querySelector('.btn');
 var alcoholButtonEl = document.querySelector('#submit');
 var mixerButtonEl = document.querySelector('#mixersButton');
 var recipeButtonEl = document.querySelector('#modalBtn');
 var drinkArray = [];
->>>>>>> 50224fd877842f2ed9bb21be98f0195e9a239a61
 
 
 var buttonClickHandler = function () {
@@ -40,16 +31,6 @@ function mixersChoice () {
 }
 
   var alcoholPick = event.target.getAttribute('data-alcohol');
-<<<<<<< HEAD
-  var pick2 = event.target.getAttribute('data-mixers')
-  console.log(alcoholPick, pick2) //pick2 out
-    if (alcoholPick, pick2) {//pick2 out
-        getAlcohol(alcoholPick,pick2); //pick2 out
-     } 
-  };
-  var getAlcohol = function (alcoholPick, pick2) { //pick2
-    console.log(alcoholPick, pick2); //pick2
-=======
   //var pick2 = event.target.getAttribute('data-mixers')
   console.log(alcoholPick) //pick2 out
     if (alcoholPick) {//pick2 out
@@ -58,7 +39,6 @@ function mixersChoice () {
   
   var getAlcohol = function (alcoholPick) { //pick2
     console.log(alcoholPick); //pick2
->>>>>>> 50224fd877842f2ed9bb21be98f0195e9a239a61
 
     var apiUrl = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + alcoholPick + pick2; //pick2 out
     fetch(apiUrl)
