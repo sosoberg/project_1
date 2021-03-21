@@ -116,7 +116,7 @@ var buttonClickHandler = function () {
                 var titleDisplay4 = document.getElementById("titleDisplay4");
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
                 
-               // getRecipe(drinkArray)  
+               getRecipe(drinkArray)  
                 console.log(drinkArray)      
           });
         } else {
@@ -128,30 +128,27 @@ var buttonClickHandler = function () {
       });
   };
 
-
-  //  //YouTube function 92-110
-  // var buttonClickHandler3 = function (event){
-  //   var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
-  //   const YOUTUBE_API_KEY="AIzaSyD0xVeWqDSULJKbmLkUou2UAnZxZwSq-CM"
-  //   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=how%20to%20make%20${alcoholName}&key=${YOUTUBE_API_KEY}`;
-  //   //fetch function following the aforementioned process
-  //   fetch(url)
-  //     .then(function (response) {
-  //       if (response.ok) {
-  //         response.json().then(function (data) {
-  //           document.querySelector(".youtubeVideo > iframe").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
-  //           // make the modal visible
-  //           document.querySelector(".modal").style.display="block"
-  //         });
-  //       } else {
-  //         alert('Error: ' + response.statusText);
-  //       }
-  //   });
-  // }
-
-
-
-var getRecipe = function (recipePick) { 
+ /*  //YouTube function 92-110
+  var buttonClickHandler3 = function (event){
+    var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
+    const YOUTUBE_API_KEY="AIzaSyD0xVeWqDSULJKbmLkUou2UAnZxZwSq-CM"
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=how%20to%20make%20${alcoholName}&key=${YOUTUBE_API_KEY}`;
+    //fetch function following the aforementioned process
+    fetch(url)
+      .then(function (response) {
+        if (response.ok) {
+          response.json().then(function (data) {
+            document.querySelector(".youtubeVideo > iframe").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
+            // make the modal visible
+            document.querySelector(".modal").style.display="block"
+          });
+        } else {
+          alert('Error: ' + response.statusText);
+        }
+    });
+  }
+*/
+  var getRecipe = function (recipePick) { 
     console.log(recipePick); 
     
     for (var i = 0; i < drinkArray.length; i++) {
@@ -168,6 +165,10 @@ var getRecipe = function (recipePick) {
               console.log(recipeDisplay)
               recipeDisplay.innerHTML=data.drinks[0].strInstructions;
               console.log(recipeDisplay);
+
+              var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
+              var nameDisplay = document.getElementById ("name");
+              nameDisplay.innerHTML = alcoholName;
   
           });
       } else {
