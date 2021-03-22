@@ -116,7 +116,7 @@ label {
     background-color: #2c2c2c;
 }
 
-.modalbtn {
+.modalbtn, .modalbtn1, .modalbtn2, .modalbtn3, .modalbtn4 {
     background-color: #000000;
     width: 100%;
     color: #ffffff;
@@ -124,7 +124,7 @@ label {
     padding: 5px;
 }
 
-.modalbtn:hover {
+.modalbtn:hover, .modalbtn1:hover, .modalbtn2:hover, .modalbtn3:hover, .modalbtn4:hover {
     font-weight: 700;
     font-size: 16px;
     background-color: #2c2c2c;
