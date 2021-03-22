@@ -111,7 +111,7 @@ var buttonClickHandler = function () {
               titleDisplay2.innerHTML = data.drinks[2].strDrink;
               const modalBtn2 = document.querySelector(".modalbtn2");
               console.log(modalBtn2);
-              modalBtn.addEventListener("click", function(){
+              modalBtn2.addEventListener("click", function(){
               console.log("hi")
               getRecipe(data.drinks[2])
             })
@@ -126,7 +126,7 @@ var buttonClickHandler = function () {
                titleDisplay3.innerHTML = data.drinks[3].strDrink;
                const modalBtn3 = document.querySelector(".modalbtn3");
                console.log(modalBtn3);
-              modalBtn.addEventListener("click", function(){
+              modalBtn3.addEventListener("click", function(){
               console.log("hi")
               getRecipe(data.drinks[3])
             })
@@ -141,7 +141,7 @@ var buttonClickHandler = function () {
                 titleDisplay4.innerHTML = data.drinks[4].strDrink;
                 const modalBtn4 = document.querySelector(".modalbtn2");
                 console.log(modalBtn4);
-                modalBtn.addEventListener("click", function(){
+                modalBtn4.addEventListener("click", function(){
                 getRecipe(data.drinks[4])
             })
                 
