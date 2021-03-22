@@ -10,11 +10,11 @@
 
 # About this Project
 
-![alt text](assets/images/project.PNG "Screen Shot of webframe for future website")
+![alt text](assets/images/project.jpeg "Screen Shot of webframe for future website")
 
 ## Description
 
-Our app is a simple way for someone to find out what sort of mixed drinks they can create based on the contents of their fridge. They can select the ingredients via checkboxes; such as the type of alcohol and a key extra ingredient; then they will be presented with a list of possible drinks that they can make. When the user decides on what drink to create, they can click the create button, and it will open a modal with the list of ingredients and a Youtube video showing a tutuorial of how to make said drink. 
+Our app is a simple way for someone to find out what sort of mixed drinks they can create based on the contents of their fridge. They can select the ingredients via checkboxes; such as the type of alcohol and a key extra ingredient; then they will be presented with a list of possible drinks that they can make. When the user decides on what drink to create, they can click the create button, and it will open a modal with instructions of how to make the drink and also Youtube video showing how to make the drink.
 
 This app should ease the stress of any user who has a hard time coming up with fun alcoholic drinks for any party.
 
@@ -28,6 +28,8 @@ This app should ease the stress of any user who has a hard time coming up with f
 * [The Cocktail DB](https://www.thecocktaildb.com/api.php)
 
 # Usage
+
+Click the link to our webpage: <https://sosoberg.github.io/project_1/>
 
 # Contributors
 
