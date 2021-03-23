@@ -160,7 +160,7 @@ var buttonClickHandler = function () {
       });
   };
 
- /*  //YouTube function 92-110
+   //YouTube function 92-110
   var buttonClickHandler3 = function (event){
     var alcoholName = document.querySelector(".carousel_card_visible > div > h4").innerHTML
     const YOUTUBE_API_KEY="AIzaSyD0xVeWqDSULJKbmLkUou2UAnZxZwSq-CM"
@@ -179,7 +179,7 @@ var buttonClickHandler = function () {
         }
     });
   }
-*/
+
   var getRecipe = function (recipePick) { 
     console.log({recipePick}); 
     
@@ -219,6 +219,6 @@ var buttonClickHandler = function () {
 
 
   alcoholButtonEl.addEventListener('click', buttonClickHandler);
-  //mixerButtonEl.addEventListener('click', buttonClickHandler2);
- // recipeButtonEl.addEventListener('click', buttonClickHandler3);
+
+  recipeButtonEl.addEventListener('click', buttonClickHandler3);
 
